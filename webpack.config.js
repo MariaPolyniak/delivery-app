@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const path = require("path");
 
@@ -49,5 +50,8 @@ module.exports = {
       template: path.join(__dirname, "src/index.html"),
     }),
     new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: "src/index.html" }],
+    }),
   ],
 };
