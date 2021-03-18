@@ -1,7 +1,19 @@
-import React from "react";
+import React from 'react';
+import Container from './Container';
+import Header from './Header';
+import MenuList from './MenuList';
+import SideBar from './SideBar';
+import Footer from './Footer';
 
 function App() {
-  return <p>Hello world</p>;
+  return (
+    <Container>
+      <Header />
+      <MenuList />
+      <SideBar />
+      <Footer />
+    </Container>
+  );
 }
 
 export default App;
